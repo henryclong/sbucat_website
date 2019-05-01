@@ -1,0 +1,60 @@
+{
+    "locations": [
+        {
+            "id": "KELLY",
+            "label": "Kelly",
+            "location": [40.915539, -73.132169],
+            "station": true,
+            "shelter": true
+        },
+        {
+            "id": "SAC",
+            "label": "SAC/H-lot",
+            "location": [40.913836, -73.128409],
+            "station": true,
+            "shelter": true
+        },
+        {
+            "id": "WEST1",
+            "label": "West E",
+            "location": [40.911547, -73.134462],
+            "station": true,
+            "shelter": true
+        },
+        {
+            "id": "WEST2",
+            "label": "West G",
+            "location": [40.913542, -73.135739],
+            "station": true,
+            "shelter": true
+        },
+        {
+            "id": "TABLER",
+            "label": "Tabler",
+            "location": [40.910124, -73.124179],
+            "station": true,
+            "shelter": true
+        },
+        {
+            "id": "UNDERPASS",
+            "label": "Underpass",
+            "location": [40.911023, -73.118776],
+            "station": false,
+            "shelter": true
+        },
+        {
+            "id": "SOCCER",
+            "label": "Soccer",
+            "location": [40.920552, -73.124263],
+            "station": false,
+            "shelter": true
+        },
+        {
+            "id": "TENNIS",
+            "label": "Tennis",
+            "location": [40.921143, -73.121558],
+            "station": true,
+            "shelter": true
+        }
+    ]
+}
