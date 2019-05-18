@@ -12,6 +12,7 @@ $white: #ffffff;
 // Fonts
 $roboto-slab: 'Roboto Slab', serif;
 $lato: 'Lato', sans-serif;
+$noto: 'Noto Sans', sans-serif;
 
 $default-font: $roboto-slab;
 
@@ -75,6 +76,7 @@ div {
             text-decoration: none;
             font-size: 1em;
             position: relative;
+            margin: 1.0em;
         }
         a::before {
             background-color: $white;
@@ -95,21 +97,104 @@ div {
 }
 
 .Content {
-    background-color: $white;
+    //background-color: $white;
     min-height: calc(100vh - 10em);
 }
 
-.MainContent {
-
+/*#MainContent {
+    background:
+    linear-gradient(
+        rgba(128, 0, 0, 0.5), 
+        rgba(128, 0, 0, 0.5)
+      ),
+      url("/resources/images/james-sutton-705775-unsplash.jpg");
+    background-size: 100%;
+    background-attachment: fixed;
+    min-height: calc(100vh - 5em);
+    padding: 1em;
+    h1 {
+        font-family: $default-font;
+        color: $white;
+        font-size: 7em;
+        //text-shadow: 0 0.05em 0.15em $black;
+        margin: 0;
+    }
+}*/
+#MainContent {
+    background:
+    linear-gradient(
+        rgba(128, 0, 0, 0.75), 
+        rgba(128, 0, 0, 0.75)
+      ),
+      url("/resources/images/james-sutton-705775-unsplash.jpg");
+    background-size: 100%;
+    background-attachment: fixed;
+    min-height: calc(100vh - 5em);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    h1 {
+        font-family: $default-font;
+        color: $white;
+        font-size: 7em;
+        //text-shadow: 0 0.05em 0.15em $black;
+        margin: 0;
+    }
+    button {
+        background: none;
+        border: 0.1em solid $white;
+        border-radius: 0.5em;
+        color: $white;
+        text-decoration: none;
+        font-size: 1.5em;
+        font-family: $default-font;
+        padding: 0.25em 0.75em 0.25em 0.75em;
+        margin: 0.5em;
+        margin-top: 1.25em;
+        transition-property: background-color, color;
+        transition-duration: 0.15s;
+    }
+    button:hover {
+        background-color: $white;
+        color: $primary;
+    }
+    a {
+        color: white;
+        text-decoration: none;
+        font-size: 1em;
+        padding: 0 1em 0 1em;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+    .SplashContent {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
 }
 
-.SignupContent {
+/*#MainContent::after {
+    position: absolute;
+    background-color: $primary;
+    opacity: 0.75;
+    content: "";
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    //z-index: 1;
+}*/
+
+#SignupContent {
     display: flex;
     align-items: center;
     flex-direction: column;
     width: 100%;
     iframe {
-        //border-radius: 2em;
         overflow: hidden;
         padding-top: 2em;
     }
