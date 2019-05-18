@@ -1,0 +1,225 @@
+
+// Color Palette
+$primary: #800000;
+$secondary: #800000;
+
+// Grey Scale
+$black: #000000;
+$grey-light: #d3d3d3;
+$grey-dark: #666666;
+$white: #ffffff;
+
+// Fonts
+$roboto-slab: 'Roboto Slab', serif;
+$lato: 'Lato', sans-serif;
+
+$default-font: $roboto-slab;
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: $default-font;
+    min-height: 100vh;
+}
+
+.JavaScriptBanner {
+    background-color: $grey-dark;
+    width: 100%;
+    height: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    p {
+        color: $white;
+        font-size: 1em;
+    }
+}
+
+div {
+    // For layout testing
+    //border: 1px $black solid;
+}
+
+.Header {
+    background-color: $primary;
+    display: grid;
+    grid-template-areas: "logo title tabs";
+    grid-template-columns: 6em 2fr 2fr;
+    justify-items: center;
+    align-items: center;
+    .Logo {
+        grid-area: logo;
+        height: 5em;
+        padding: 0.5em;
+    }
+    .Title {
+        grid-area: title;
+        display:flex;
+        align-items: center;
+        justify-content: flex-start;
+        height: 100%;
+        width: 100%;
+        h1 {
+            color: $white;
+            font-size: 2em;
+        }
+    }
+    .Tabs {
+        grid-area: tabs;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        position: relative;
+        a {
+            color: $white;
+            text-decoration: none;
+            font-size: 1em;
+            position: relative;
+        }
+        a::before {
+            background-color: $white;
+            content: "";
+            width: 0;
+            height: 0.075em;
+            position: absolute;
+            top: 1.1em;
+            transition-property: width;
+            transition-duration: 0.25s;
+        }
+        a:hover::before {
+            width: 100%;
+        }
+        height: 100%;
+        width: 100%;
+    }
+}
+
+.Content {
+    background-color: $white;
+    min-height: calc(100vh - 10em);
+}
+
+.MainContent {
+
+}
+
+.SignupContent {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    iframe {
+        //border-radius: 2em;
+        overflow: hidden;
+        padding-top: 2em;
+    }
+}
+
+.MapContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    #map {
+        background-color: $grey-light;
+        border-radius: 1.0em;
+        box-shadow: 0 0.25em 0.5em $grey-light;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: calc(100vw - 4em);
+        margin: 2em;
+        //height: auto;
+        min-height: calc(100vh - 4em - 14em);
+        img {
+            border-radius: 1.0em;
+            height: 100%;
+            width: 100%;
+        }
+        p {
+            color: $black;
+            font-family: $default-font;
+            margin: 0;
+        }
+    }
+}
+
+noscript {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .ContentNoScript {
+        background-color: $white;
+        border: solid 0.25em $primary;
+        border-radius: 1.0em;
+        color: $primary;
+        padding: 1.0em;
+        margin: 2em;
+        height: 50%;
+        width: 50%;
+    }
+}
+
+#EventsContent {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.CalendarEvent {
+    background-color: $white;
+    //border: solid 0.25em $primary;
+    border-radius: 1.0em;
+    box-shadow: 0 0.25em 0.5em $grey-light;
+    display: grid;
+    margin-bottom: 1.5em;
+    padding: 0 1em 1em 1em;
+    overflow: hidden;
+    width: 50%;
+    grid-template-areas:
+        "date title"
+        "date description"
+        "time location";
+    grid-template-columns: 6em auto;
+    grid-template-rows: 2em 4em 1em;
+    column-gap: 1em;
+    .CalendarDate {
+        grid-area: date;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .DateMonth {
+            font-size: 1.25em;
+        }
+        .DateDay {
+            font-size: 2.5em;
+        }
+    }
+    .CalendarTitle {
+        grid-area: title;
+        display: flex;
+        align-items: center;
+        // padding-left: 1em;
+        // font-family: $lato;
+        // font-size: 1.25em;
+    }
+    .CalendarDescription {
+        grid-area: description;
+        // padding-left: 1em;
+        overflow: hidden;
+    }
+    .CalendarTime {
+        grid-area: time;
+        display: flex;
+        justify-content: center;
+    }
+    .CalendarLocation {
+        grid-area: location;
+        // margin-left: 1em;
+    }
+}
+
+.Footer {
+    background-color: $primary;
+    height: 4em;
+}

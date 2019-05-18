@@ -1,0 +1,47 @@
+{
+    "semesters": {
+        "Fall 2019": [
+            {
+                "month": "November",
+                "day": 9,
+                "title": "Sample Title 5",
+                "description": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the...",
+                "location": "SAC 304",
+                "time": "7:00pm"
+            },
+            {
+                "month": "September",
+                "day": 24,
+                "title": "Sample Title 4",
+                "description": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the...",
+                "location": "SAC 304",
+                "time": "7:00pm"
+            }
+        ],
+        "Spring 2019": [
+            {
+                "month": "May",
+                "day": 15,
+                "title": "Sample Title 3",
+                "description": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the...",
+                "location": "SAC 304",
+                "time": "7:00pm"
+            },
+            {
+                "month": "February",
+                "day": 21,
+                "title": "Sample Title 2",
+                "description": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the...",
+                "location": "SAC 304",
+                "time": "7:00pm"
+            },
+            {
+                "month": "January",
+                "day": 1,
+                "title": "Sample Title 1",
+                "description": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the...",
+                "location": "SAC 304",
+                "time": "7:00pm"
+            }        ]
+    }
+}
