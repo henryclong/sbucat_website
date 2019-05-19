@@ -37,24 +37,27 @@ body {
         font-size: 1em;
     }
 }
-
 a {
     color: $white;
     text-decoration: none;
-    position: relative;
 }
-a::before {
-    background-color: $white;
-    content: "";
-    width: 0;
-    height: 0.075em;
-    position: absolute;
-    top: 1.1em;
-    transition-property: width;
-    transition-duration: 0.25s;
-}
-a:hover::before {
-    width: 100%;
+@media screen and (min-width: 900px) {
+    a {
+        position: relative;
+    }
+    a::before {
+        background-color: $white;
+        content: "";
+        width: 0;
+        height: 0.075em;
+        position: absolute;
+        top: 1.1em;
+        transition-property: width;
+        transition-duration: 0.25s;
+    }
+    a:hover::before {
+        width: 100%;
+    }
 }
 
 .Header {
@@ -84,6 +87,7 @@ a:hover::before {
     .Tabs {
         grid-area: tabs;
         display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: space-evenly;
         position: relative;
@@ -95,6 +99,14 @@ a:hover::before {
         width: 100%;
     }
 }
+@media screen and (min-width: 600px) {
+    .Header {
+        .Tabs {
+            flex-direction: row;
+        }
+    }
+}
+
 
 #SplashContent {
     background:
@@ -107,10 +119,10 @@ a:hover::before {
     background-attachment: fixed;
     display: grid;
     grid-template-areas:
-        ". nav ."
         ". . ."
         "title title title"
-        ". buttons .";
+        ". buttons ."
+        ". nav .";
     grid-template-columns: 1fr 2fr 1fr;
     grid-template-rows: 4em 1fr 1fr 1fr 4em;
     height: 100vh;
@@ -118,7 +130,7 @@ a:hover::before {
         grid-area: title;
         font-family: $default-font;
         color: $white;
-        font-size: 7em;
+        font-size: 4.5em;
         margin: 0;
         text-align: center;
     }
@@ -137,7 +149,7 @@ a:hover::before {
             border-radius: 0.5em;
             color: $primary;
             text-decoration: none;
-            font-size: 1.75em;
+            font-size: 1.5em;
             font-family: $default-font;
             padding: 0.25em 0.75em 0.25em 0.75em;
             margin: 0.25em;
@@ -150,7 +162,7 @@ a:hover::before {
             border-radius: 0.5em;
             color: $white;
             text-decoration: none;
-            font-size: 1.25em;
+            font-size: 1em;
             font-family: $default-font;
             padding: 0.25em 0.75em 0.25em 0.75em;
             margin: 0.25em;
@@ -161,38 +173,80 @@ a:hover::before {
     .Tabs {
         grid-area: nav;
         display: flex;
+        flex-direction: column;
+        text-align: center;
         justify-content: space-between;
-        padding: 1em;
+        padding: 2em;
     }
     a {
         color: white;
         text-decoration: none;
         font-size: 1em;
-        margin: 0 1em 0 1em;
+        margin: 0em 1em 1.5em 1em;
     }
 }
-
-#ReturnToTop {
-    background-color: $white;
-    border-radius: 1em;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-    position: sticky;
-    top: 0.5em;
-    width: 15%;
-    margin: 0.5em;
-    box-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.5);
-    i {
-        grid-area: title;
-        color: $primary;
-        text-align: center;
-        font-size: 2em;
-        margin: 0.25em;
+@media screen and (min-width: 850px) {
+    #SplashContent {
+        grid-template-areas:
+        ". nav ."
+        ". . ."
+        "title title title"
+        ". buttons .";
+        .Tabs {
+            flex-direction: row;
+        }
+        a {
+            margin: 0em 1em 0 1em;
+        }
     }
-    p {
-        text-align: center;
+}
+@media screen and (min-width: 500px) {
+    #SplashContent {
+        h1 {
+            grid-area: title;
+            font-size: 6em;
+        }
+        .SplashButtons {
+            .PrimaryButton {
+                font-size: 1.75em;
+            }
+            .SecondaryButton {
+                font-size: 1.25em;
+            }
+        }
+    }
+}
+@media screen and (min-width: 600px) {
+    #SplashContent {
+        h1 {
+            grid-area: title;
+            font-size: 7em;
+        }
+    }
+}
+@media screen and (min-width: 1050px) {
+    #ReturnToTop {
+        background-color: $white;
+        border-radius: 1em;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        position: sticky;
+        top: 0.5em;
+        width: 15%;
+        margin: 0.5em;
+        box-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.5);
+        i {
+            grid-area: title;
+            color: $primary;
+            text-align: center;
+            font-size: 2em;
+            margin: 0.25em;
+        }
+        p {
+            text-align: center;
+        }
     }
 }
 
@@ -227,21 +281,21 @@ a:hover::before {
 }
 
 #MainContent {
-    //max-height: 200vh;
     display: flex;
     flex-direction: column;
 }
 .MainContentPanel {
     display: grid;
     grid-template-areas:
-    "title title"
-    "img text";
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto;
+    "title"
+    "img"
+    "text";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    justify-items: center;
+    align-items: center;
     column-gap: 1em;
     .Image {
-        //background-color: #ff0000;
-        // border-radius: 1em;
         grid-area: img;
         max-width: 50vw;
         padding: 1em;
@@ -269,10 +323,21 @@ a:hover::before {
         margin: 0;
     }
 }
-.MainContentPanel:nth-child(even) {
-    grid-template-areas:
-    "title title"
-    "text img";
+@media screen and (min-width: 900px) {
+    .MainContentPanel {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+    }
+    .MainContentPanel:nth-child(odd) {
+        grid-template-areas:
+        "title title"
+        "img text";
+    }
+    .MainContentPanel:nth-child(even) {
+        grid-template-areas:
+        "title title"
+        "text img";
+    }
 }
 
 #SignupContent {
